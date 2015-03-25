@@ -234,7 +234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &121864212
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1102,15 +1102,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
+    m_Left: 96
     m_Right: 0
-    m_Top: 0
+    m_Top: 130
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 400, y: 400}
-  m_Spacing: {x: 0, y: 0}
+  m_Spacing: {x: 135, y: 115.900002}
   m_Constraint: 1
   m_ConstraintCount: 2
 --- !u!114 &478812480
@@ -1255,10 +1255,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b24e5b9f5349e43b5eb94ae125f04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Screen2: {fileID: 0}
   Screen4: {fileID: 0}
   ScreenName: {fileID: 364185735}
   Panel: {fileID: 0}
-  RowImagePrefab: {fileID: 0}
+  GalleryIconPrefab: {fileID: 0}
 --- !u!1 &628052412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,7 +1648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &709295636
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2546,6 +2547,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 126346, guid: e6dc152fda80f1c4cab00953d59a9d8d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6dc152fda80f1c4cab00953d59a9d8d, type: 2}
   m_RootGameObject: {fileID: 1972935123}
@@ -2569,7 +2574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1231643336
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2666,10 +2671,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b24e5b9f5349e43b5eb94ae125f04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Screen2: {fileID: 0}
   Screen4: {fileID: 1287471203}
   ScreenName: {fileID: 364185735}
   Panel: {fileID: 0}
-  RowImagePrefab: {fileID: 0}
+  GalleryIconPrefab: {fileID: 0}
 --- !u!1 &1253870316
 GameObject:
   m_ObjectHideFlags: 0
@@ -2997,6 +3003,10 @@ Prefab:
       propertyPath: m_Name
       value: Button - GalleryPictureIcon
       objectReference: {fileID: 0}
+    - target: {fileID: 126346, guid: e6dc152fda80f1c4cab00953d59a9d8d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6dc152fda80f1c4cab00953d59a9d8d, type: 2}
   m_RootGameObject: {fileID: 2043551068}
@@ -3158,7 +3168,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1516798369}
-        m_MethodName: GoToNextScreen
+        m_MethodName: GoToNextScreenWithoutDeactivationofCurrent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3234,10 +3244,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b24e5b9f5349e43b5eb94ae125f04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Screen2: {fileID: 468273883}
   Screen4: {fileID: 1287471203}
   ScreenName: {fileID: 364185735}
   Panel: {fileID: 478812479}
-  RowImagePrefab: {fileID: 0}
+  GalleryIconPrefab: {fileID: 11437442, guid: e6dc152fda80f1c4cab00953d59a9d8d, type: 2}
 --- !u!1 &1558751342
 GameObject:
   m_ObjectHideFlags: 0
@@ -4154,13 +4165,14 @@ GameObject:
   - 114: {fileID: 1972935127}
   - 114: {fileID: 1972935126}
   - 114: {fileID: 1972935125}
+  - 114: {fileID: 1972935129}
   m_Layer: 5
   m_Name: GalleryPictureIconButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1972935124
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4191,10 +4203,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b24e5b9f5349e43b5eb94ae125f04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Screen2: {fileID: 0}
   Screen4: {fileID: 0}
   ScreenName: {fileID: 0}
   Panel: {fileID: 0}
-  RowImagePrefab: {fileID: 0}
+  GalleryIconPrefab: {fileID: 0}
 --- !u!114 &1972935126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4266,6 +4279,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1023251470}
   m_GameObject: {fileID: 1972935123}
+--- !u!114 &1972935129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11437442, guid: e6dc152fda80f1c4cab00953d59a9d8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1023251470}
+  m_GameObject: {fileID: 1972935123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb71c9a45c36da44b14a0c03f6b958f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1979895345
 GameObject:
   m_ObjectHideFlags: 0
@@ -4344,7 +4369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2018134858
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4511,13 +4536,14 @@ GameObject:
   - 114: {fileID: 2043551071}
   - 114: {fileID: 2043551070}
   - 114: {fileID: 2043551073}
+  - 114: {fileID: 2043551074}
   m_Layer: 5
   m_Name: Button - GalleryPictureIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2043551069
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4619,7 +4645,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b24e5b9f5349e43b5eb94ae125f04f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Screen2: {fileID: 0}
   Screen4: {fileID: 0}
   ScreenName: {fileID: 0}
   Panel: {fileID: 0}
-  RowImagePrefab: {fileID: 0}
+  GalleryIconPrefab: {fileID: 0}
+--- !u!114 &2043551074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11437442, guid: e6dc152fda80f1c4cab00953d59a9d8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1416357412}
+  m_GameObject: {fileID: 2043551068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb71c9a45c36da44b14a0c03f6b958f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

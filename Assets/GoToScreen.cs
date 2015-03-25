@@ -14,4 +14,9 @@ public class GoToScreen : MonoBehaviour
         CurrentScreen.gameObject.SetActive(false);
         NextScreen.gameObject.SetActive(true);
     }
+
+    public void GoToNextScreenWithoutDeactivationofCurrent()
+    {
+        NextScreen.gameObject.SetActive(true);
+    }
 }
