@@ -1,9 +1,5 @@
-﻿using System;
-using System.Net.Mime;
-using Assets;
-using UnityEditor;
+﻿using System.Collections;
 using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 
 public class ScrollableGalleryList : MonoBehaviour
@@ -13,8 +9,11 @@ public class ScrollableGalleryList : MonoBehaviour
     public LayoutGroup Panel;
     public RowImageTextButton RowImagePrefab;
 
-    public void Fill(Sprite toFill)
+    IEnumerator Fill(Sprite toFill)
     {
+        if (toFill == null)
+            yield return new WaitForEndOfFrame();
+        
         var t = Panel.transform;
         var view = t.InstantiateAsChild(RowImagePrefab);
        
@@ -28,7 +27,8 @@ public class ScrollableGalleryList : MonoBehaviour
         ScreenName.text = DumbSingleton.Instance.organization.OrganizationName + " Gallery";
         var  imgd = Screen4.GetComponent<ImagesDownloader>();
         imgd.GetComponent<ImagesDownloader>().Download();
-        Fill(DumbSingleton.Instance.organization.GallerySprite);
+
+        StartCoroutine(Fill(DumbSingleton.Instance.organization.GallerySprite));
     }
 
     public void ManageFullScreenList()
