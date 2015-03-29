@@ -35,7 +35,7 @@ public class RegistrationHandler : MonoBehaviour
         headers.Add("Content-Type", "application/json");
         var body = Encoding.UTF8.GetBytes(
             JsonMapper.ToJson(usr));
-        var www = new WWW(Url, body, headers);
+        var www = new WWW(Url, body, headers);  
 
         yield return www;
 //        yield www;
@@ -47,6 +47,7 @@ public class RegistrationHandler : MonoBehaviour
         else
         {
             Debug.Log(www.text);
+
         }
         // Create a Web Form
 //        var form = new WWWForm();
