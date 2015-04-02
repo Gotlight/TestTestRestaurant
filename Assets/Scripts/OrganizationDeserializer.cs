@@ -16,7 +16,7 @@ public class OrganizationDeserializer : MonoBehaviour
 {
     public Organizations organizations = new Organizations();
 
-    public string url = "http://www.grosseto.somee.com/api/organization";
+    public string url = "http://localhost:24024/api/organization";
     
     public WWW www;
 

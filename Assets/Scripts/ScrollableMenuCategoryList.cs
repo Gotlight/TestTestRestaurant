@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Assets;
 using UnityEngine;
@@ -15,6 +16,8 @@ public class ScrollableMenuCategoryList : MonoBehaviour
     public Button BackButton;
     public Button BackButtonFirstLevel;
     public Image Details;
+    public int level;
+    public string BackButtonMenuCategoryBuff;
 
     public void Fill(IEnumerable<ModelMenu> menus)
     {
@@ -76,7 +79,10 @@ public class ScrollableMenuCategoryList : MonoBehaviour
         {
             BackButtonFirstLevel.gameObject.SetActive(true);
             BackButton.gameObject.SetActive(false);
+            BackButton.gameObject.GetComponent<ScrollableMenuCategoryList>().BackButtonMenuCategoryBuff =
+                "00000000-0000-0000-0000-000000000000";
         }
+        level = 1;
     }
 
     public void ManageMenuSecondLevel()
@@ -89,47 +95,38 @@ public class ScrollableMenuCategoryList : MonoBehaviour
         IEnumerable<ModelMenu> list = null;
         string id;
         var itemList = new List<ModelItem>();
-        if (BackButtonMenuCategoryID.Equals(""))
+        if (BackButtonMenuCategoryBuff.Equals("") && BackButtonMenuCategoryID.Equals(""))
         {
             list = org.Catalogs.data.Where(x => x.ParentID == MenucategoryId);
-            BackButton.GetComponent<ScrollableMenuCategoryList>().BackButtonMenuCategoryID = MenucategoryId;
+//            BackButton.GetComponent<ScrollableMenuCategoryList>().BackButtonMenuCategoryID = MenucategoryId;
+            BackButtonMenuCategoryID = BackButtonMenuCategoryBuff;
+            BackButtonMenuCategoryBuff = MenucategoryId;
+
+           
             ScreenName.text = org.Catalogs.data.Where(x => x.ID == MenucategoryId).First().MenuCatalogLocalizationName;
 
             foreach (var menuRow in list)
             {
-                var item = org.Items.data.First(x => x.MenuCatalogID == menuRow.ID);
-                itemList.Add(item);
+                try
+                {
+                    var item = org.Items.data.First(x => x.MenuCatalogID == menuRow.ID);
+                    itemList.Add(item);
+                }
+                catch (Exception)
+                {
+                    break;
+                }
+
                 if (itemList.Count == org.Items.data.Count)
                     break;
             }
         }
-        else                                        // the branch for Back button
+        else
         {
-            if (BackButtonMenuCategoryID == "00000000-0000-0000-0000-000000000000")
-            {
-                BackButtonFirstLevel.gameObject.SetActive(true);
-                BackButton.gameObject.SetActive(false);
-                BackButtonFirstLevel.GetComponent<GoToScreen>().GoToNextScreen();
-
-            }
-            else 
-            {
-                id = org.Catalogs.data.Where(x => x.ID == BackButtonMenuCategoryID).First().ParentID;
-               
-                    list = org.Catalogs.data.Where(x => x.ParentID == id);
-                    BackButtonMenuCategoryID = id;
-                if (id != "00000000-0000-0000-0000-000000000000")
-                {
-                    ScreenName.text = org.Catalogs.data.First(x => x.ID == id).MenuCatalogLocalizationName;
-                }
-                else
-                {
-                    ScreenName.text = DumbSingleton.Instance.organization.OrganizationName + " menu list"; 
-                }
-                
-                
-            }
+            list = org.Catalogs.data.Where(x => x.ParentID == BackButtonMenuCategoryID);
+            ScreenName.text = DumbSingleton.Instance.organization.OrganizationName + " menu list";
         }
+        
         if (itemList.Count() != 0)
         {
             Fill(itemList);

@@ -38,7 +38,6 @@ public class RegistrationHandler : MonoBehaviour
         var www = new WWW(Url, body, headers);  
 
         yield return www;
-//        yield www;
 
         if (Convert.ToBoolean(www.error))
         {
@@ -60,5 +59,7 @@ public class RegistrationHandler : MonoBehaviour
 
 //        yield return a;
     }
+
+
 }
 
