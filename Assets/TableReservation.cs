@@ -10,4 +10,5 @@ public class TableReservation : MonoBehaviour
     {
         GetComponentInChildren<Text>().text = DumbSingleton.Instance.organization.OrganizationName + " reservation";
     }
+
 }
