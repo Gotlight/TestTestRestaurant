@@ -63,8 +63,6 @@ GameObject:
   - 114: {fileID: 11449372}
   - 114: {fileID: 11449374}
   - 114: {fileID: 11444224}
-  - 114: {fileID: 11481886}
-  - 114: {fileID: 11495952}
   m_Layer: 5
   m_Name: RowImageTextButton
   m_TagString: Untagged
@@ -128,6 +126,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _text: {fileID: 11449368}
   _image: {fileID: 11449370}
+  LevelInfoScript: {fileID: 0}
+  MyInfo:
+    ID: 
+    ParentID: 
+    MenuCatalogLocalizationName: 
+  Price: {fileID: 11432428}
+  DetailsIcon: {fileID: 11449376}
 --- !u!114 &11449368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,8 +240,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11481886}
-        m_MethodName: ManageMenuSecondLevel
+      - m_Target: {fileID: 11444224}
+        m_MethodName: Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -270,45 +275,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &11481886
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98ce8b8a7da1a5a4b9f8b9235bfc2c75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MenuCategoryPrefab: {fileID: 11444224}
-  PriceForItem: {fileID: 11432428}
-  Panel: {fileID: 0}
-  ScreenName: {fileID: 0}
-  MenucategoryId: 
-  BackButtonMenuCategoryID: 
-  BackButton: {fileID: 0}
-  BackButtonFirstLevel: {fileID: 0}
-  Details: {fileID: 11449376}
---- !u!114 &11495952
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149374}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 853ba20157c5629439fcd0886f6d7c40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MenuCategoryPrefab: {fileID: 11444224}
-  PriceForItem: {fileID: 11432428}
-  Panel: {fileID: 0}
-  ScreenName: {fileID: 0}
-  MenucategoryId: 
-  BackButton: {fileID: 0}
-  BackButtonFirstLevel: {fileID: 0}
-  Details: {fileID: 11449376}
 --- !u!222 &22232428
 CanvasRenderer:
   m_ObjectHideFlags: 1
