@@ -4,7 +4,6 @@ using System.Linq;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
 public class LevelInfo : MonoBehaviour
 {
     public Stack<ModelMenu> LevelInfoStack;
@@ -20,7 +19,7 @@ public class LevelInfo : MonoBehaviour
 
     void OnEnable()
     {
-        
+        Debug.Log(PlayerPrefs.GetString("Login token"));
         var menuLevel = new ModelMenu
         {
             ID = "00000000-0000-0000-0000-000000000000",

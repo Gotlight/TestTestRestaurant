@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Security.Policy;
 using System.Text;
+using Assets.Scripts;
 using LitJson;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +18,7 @@ public class RegistrationHandler : MonoBehaviour
     public InputField UsernameField;
     public InputField PasswordField;
     private const string Url = "http://localhost:24024/api/AspNetUser";
+    
 
     public void Register()
     {
@@ -47,19 +47,38 @@ public class RegistrationHandler : MonoBehaviour
         {
             Debug.Log(www.text);
 
-        }
-        // Create a Web Form
-//        var form = new WWWForm();
-//        form.AddField("username", UsernameField.text);
-//        form.AddField("password", PasswordField.text);
-////        form.AddField("ConfirmPassword", PasswordField.text);
-//
-//        // Upload to a cgi script
-//        var a = new WWW(Url, form);
+              
 
-//        yield return a;
+            UserData LoggedInUser = JsonMapper.ToObject<UserData>(www.text);
+            PlayerPrefs.SetString("User id", LoggedInUser.Id);
+//            
+            PlayerPrefs.SetString("User name", LoggedInUser.UserName);
+
+
+            WWWForm form = new WWWForm();
+            form.AddField("name", "value");
+            headers = form.headers;
+            byte[] rawData = form.data;
+
+            var encoding = new System.Text.UTF8Encoding();
+            headers = new Hashtable();
+            headers.Add("Content-Type", "application/x-www-form-urlencoded");
+            string b = "grant_type=password" + "&username=" + usr.username + "&password=" + usr.password;
+            www = new WWW("http://localhost:24024/token", encoding.GetBytes(b), headers);
+            yield return www;
+
+            UserToken loggedInUserToken = JsonMapper.ToObject<UserToken>(www.text);
+            PlayerPrefs.SetString("Access token", loggedInUserToken.access_token);
+        }
     }
 
 
 }
 
+[Serializable]
+public class UserToken
+{
+    public string access_token;
+    public string token_type;
+    public int expires_in;
+}
