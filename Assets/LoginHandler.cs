@@ -1,41 +1,34 @@
 ﻿using System;
-using System.Collections;
 using System.Text;
 using Assets.Scripts;
 using LitJson;
 using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
 
-public class User
-{
-    public string username { get; set; }
-    public string password { get; set; }
-}
-
-public class RegistrationHandler : MonoBehaviour
-{
+public class LoginHandler : MonoBehaviour {
 
     public InputField UsernameField;
-    public InputField PasswordField;    
-    private const string Url = "http://localhost:24024/api/AspNetUser/Register";
-    
+    public InputField PasswordField;
+    private const string Url = "http://localhost:24024/api/AspNetUser/Login";
 
-    public void Register()
+
+    public void Login()
     {
-        StartCoroutine(RegisterUser());
+        StartCoroutine(LoginUser());
     }
 
-    private IEnumerator RegisterUser()
+    private IEnumerator LoginUser()
     {
         var username = UsernameField.text;
         var password = PasswordField.text;
-        var usr = new User {username = username, password = password};
+        var usr = new User { username = username, password = password };
 
         var headers = new Hashtable();
         headers.Add("Content-Type", "application/json");
         var body = Encoding.UTF8.GetBytes(
             JsonMapper.ToJson(usr));
-        var www = new WWW(Url, body, headers);  
+        var www = new WWW(Url, body, headers);
 
         yield return www;
 
@@ -47,11 +40,11 @@ public class RegistrationHandler : MonoBehaviour
         {
             Debug.Log(www.text);
 
-              
+
 
             UserData LoggedInUser = JsonMapper.ToObject<UserData>(www.text);
             PlayerPrefs.SetString("User id", LoggedInUser.Id);
-//            
+            //            
             PlayerPrefs.SetString("User name", LoggedInUser.UserName);
 
 
@@ -74,13 +67,4 @@ public class RegistrationHandler : MonoBehaviour
         }
     }
 
-
-}
-
-[Serializable]
-public class UserToken
-{
-    public string access_token;
-    public string token_type;
-    public int expires_in;
 }

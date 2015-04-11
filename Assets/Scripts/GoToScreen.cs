@@ -20,5 +20,10 @@ public class GoToScreen : MonoBehaviour
         NextScreen.gameObject.SetActive(true);
     }
 
+    public void Logout()
+    {
+        PlayerPrefs.DeleteAll();
+        GoToNextScreen();
+    }
     
 }

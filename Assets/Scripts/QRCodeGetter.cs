@@ -15,6 +15,7 @@ public class QRCodeGetter : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+        Balance.text = UnityEngine.Random.Range(0, 2000).ToString();
 	    Download();
 	}
 	
@@ -26,7 +27,7 @@ public class QRCodeGetter : MonoBehaviour
     void OnEnable()
     {
         UserId = PlayerPrefs.GetString("User id");
-        Balance.text = UnityEngine.Random.Range(0, 2500).ToString();
+        Username.text = PlayerPrefs.GetString("User name");
         
     }
 
@@ -51,6 +52,6 @@ public class QRCodeGetter : MonoBehaviour
         var vc = new Vector2(0.5f, 0.5f);
         Sprite sp = Sprite.Create(texture, rc, vc);
         QRimage.GetComponent<Image>().sprite = sp;
-        Username.text = PlayerPrefs.GetString("User name");
+        
     }
 }

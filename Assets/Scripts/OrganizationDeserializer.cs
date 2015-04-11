@@ -22,7 +22,6 @@ public class OrganizationDeserializer : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.DeleteAll();
         Download();
     }
 
