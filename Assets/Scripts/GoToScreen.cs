@@ -19,4 +19,6 @@ public class GoToScreen : MonoBehaviour
     {
         NextScreen.gameObject.SetActive(true);
     }
+
+    
 }

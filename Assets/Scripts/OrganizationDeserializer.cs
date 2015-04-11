@@ -22,6 +22,7 @@ public class OrganizationDeserializer : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.DeleteAll();
         Download();
     }
 
@@ -46,5 +47,6 @@ public class OrganizationDeserializer : MonoBehaviour
         organizations.data = JsonMapper.ToObject<List<ModelOrganization>>(www.text);
         if (organizations.data.Count != 0)
             Debug.Log("Organizations deserialized successfully!");
+        
     }
 }

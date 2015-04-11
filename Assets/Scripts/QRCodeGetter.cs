@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using Random = System.Random;
 
 public class QRCodeGetter : MonoBehaviour
 {
+
     public Image QRimage;
-    public string UserId = "710b30aa-6adb-4e7e-a262-abc6b4d24df8";
+    public string UserId;
     public string Url = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=";
+    public Text Username;
+    public Text Balance;
     private WWW www;
 	// Use this for initialization
 	void Start ()
@@ -18,6 +22,13 @@ public class QRCodeGetter : MonoBehaviour
 	void Update () {
 	
 	}
+
+    void OnEnable()
+    {
+        UserId = PlayerPrefs.GetString("User id");
+        Balance.text = UnityEngine.Random.Range(0, 2500).ToString();
+        
+    }
 
     public void Download()
     {
@@ -40,5 +51,6 @@ public class QRCodeGetter : MonoBehaviour
         var vc = new Vector2(0.5f, 0.5f);
         Sprite sp = Sprite.Create(texture, rc, vc);
         QRimage.GetComponent<Image>().sprite = sp;
+        Username.text = PlayerPrefs.GetString("User name");
     }
 }

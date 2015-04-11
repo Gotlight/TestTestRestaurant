@@ -16,7 +16,7 @@ public class RegistrationHandler : MonoBehaviour
 {
 
     public InputField UsernameField;
-    public InputField PasswordField;
+    public InputField PasswordField;    
     private const string Url = "http://localhost:24024/api/AspNetUser";
     
 
@@ -69,6 +69,7 @@ public class RegistrationHandler : MonoBehaviour
 
             UserToken loggedInUserToken = JsonMapper.ToObject<UserToken>(www.text);
             PlayerPrefs.SetString("Access token", loggedInUserToken.access_token);
+            Debug.Log(loggedInUserToken.access_token);
         }
     }
 
