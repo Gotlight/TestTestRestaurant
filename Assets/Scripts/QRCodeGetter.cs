@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using Random = System.Random;
@@ -52,6 +54,5 @@ public class QRCodeGetter : MonoBehaviour
         var vc = new Vector2(0.5f, 0.5f);
         Sprite sp = Sprite.Create(texture, rc, vc);
         QRimage.GetComponent<Image>().sprite = sp;
-        
     }
 }
