@@ -56,7 +56,7 @@ public class LevelInfo : MonoBehaviour
             list = org.Catalogs.data.Where(x => x.ParentID == level.ID);
             LevelInfoStack.Push(level);
             ScreenName.text = level.MenuCatalogLocalizationName;
-            if (LevelInfoStack.Count == 3)
+            if (LevelInfoStack.Count >= 3)
             {
                 foreach (var menuRow in list)
                 {
@@ -137,6 +137,7 @@ public class LevelInfo : MonoBehaviour
             view.LevelInfoScript = this;
             view.DetailsIcon.gameObject.SetActive(false);
             view.Price.gameObject.SetActive(true);
+            view.Price.text = i.MenuItemPrice.ToString() + ",-";
             view.GetComponentInParent<Button>().onClick.RemoveAllListeners();
         }
     }

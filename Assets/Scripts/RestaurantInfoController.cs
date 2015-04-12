@@ -33,8 +33,8 @@ public class RestaurantInfoController : MonoBehaviour
 //            if (a != null) // check if 
 //            {
 //                
-                infoDeserializer.Download("cz");                                            //  TODO: CHANGE ARGUMENT TO USER'S LANGUAGECODE
-                itemDeserializer.Download("cz");                                            //  TODO: CHANGE ARGUMENT TO USER'S LANGUAGECODE
+                infoDeserializer.Download("en");                                            //  TODO: CHANGE ARGUMENT TO USER'S LANGUAGECODE
+                itemDeserializer.Download("en");                                            //  TODO: CHANGE ARGUMENT TO USER'S LANGUAGECODE
 //                RestaurantNameText.text = a.OrganizationName;
 //            }
             DumbSingleton.Instance.downloaded = true;
