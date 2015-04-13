@@ -1,4 +1,9 @@
-﻿using System.Net.Mime;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Net.Mime;
+using System.Text;
+using LitJson;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -6,22 +11,62 @@ using UnityEngine.UI;
 public class TableReservationHandler : MonoBehaviour
 {
 
-    public Image Screen;
     private bool IsLoggedIn;
-    void OnEnable()
+
+    public Text timeLabel;
+    public Text personCountLabel;
+    private String Timetext;
+    private String PersonsCountText;
+    private String Url = "http://localhost:24024/api/TableReservation";    //TODO: Change to hosting URL
+    
+    void Start()
     {
-        IsLoggedIn = Screen.GetComponent<TableReservation>().IsLoggedIn;
+        Timetext = timeLabel.text;
+        PersonsCountText = personCountLabel.text;
     }
 
-    public void PlaceTableReservation()
+    public void Reserve()
     {
-        if (IsLoggedIn)
+        StartCoroutine(PlaceTableReservation());
+    }
+
+    public IEnumerator PlaceTableReservation()
+    {
+        if (!PlayerPrefs.GetString("User id").Equals(String.Empty))
         {
-            
-        }
-        else
-        {
-            
+            var datetime = DateTime.ParseExact(Timetext, "HH:mm", CultureInfo.InvariantCulture);
+            int personsCount = Convert.ToInt32(PersonsCountText);
+            var treservation = new TableReservation();
+            treservation.AspNetUserID = PlayerPrefs.GetString("User id");
+            treservation.OrganizationID = DumbSingleton.Instance.organization.ID;
+            treservation.PersonsCount = personsCount;
+            treservation.ReservationDateTime = datetime;
+
+            var headers = new Hashtable();
+            headers.Add("Content-Type", "application/json");
+            var body = Encoding.UTF8.GetBytes(
+                JsonMapper.ToJson(treservation));
+            var www = new WWW(Url, body, headers);
+
+            yield return www;
+
+            if (Convert.ToBoolean(www.error))
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log(www.text);
+            }
         }
     }
 }
+
+    [Serializable]
+    public class TableReservation
+    {
+        public string AspNetUserID;
+        public string OrganizationID;
+        public int PersonsCount;
+        public DateTime ReservationDateTime;
+    }

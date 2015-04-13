@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-public class TableReservation : MonoBehaviour
+public class TableReservationScreen : MonoBehaviour
 {
     public InputField UsernameField;
     public InputField TimeField;

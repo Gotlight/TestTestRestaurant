@@ -34,7 +34,7 @@ public class ShowDirectionsForRestaurant : MonoBehaviour
                 PruhoniceInfo.gameObject.SetActive(false);
                 MarinaInfo.gameObject.SetActive(false);
                 break;
-            case "Brůmlovka":
+            case "Brumlovka":
                 BrumlovkaInfo.gameObject.SetActive(true);
                 BiancoRossoInfo.gameObject.SetActive(false);
                 VinohradyInfo.gameObject.SetActive(false);
