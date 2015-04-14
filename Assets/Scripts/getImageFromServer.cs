@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class getImageFromServer : MonoBehaviour {
     //3e166d6b-8502-4411-b4ba-6ac54a3f3337
 	// Use this for initialization
-    public string Url = "http://localhost:24024/api/organization/3e166d6b-8502-4411-b4ba-6ac54a3f3337/organizationlogo";
+    public string Url = "http://www.grosseto.somee.com/api/organization/3e166d6b-8502-4411-b4ba-6ac54a3f3337/organizationlogo";
     public Button Butt;
     void Start()
     {

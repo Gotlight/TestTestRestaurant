@@ -17,7 +17,7 @@ public class TableReservationHandler : MonoBehaviour
     public Text personCountLabel;
     private String Timetext;
     private String PersonsCountText;
-    private String Url = "http://localhost:24024/api/TableReservation";    //TODO: Change to hosting URL
+    private String Url = "http://www.grosseto.somee.com/api/TableReservation";    //TODO: Change to hosting URL
     
     void Start()
     {

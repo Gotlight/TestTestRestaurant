@@ -603,6 +603,7 @@ GameObject:
   - 114: {fileID: 67598413}
   - 114: {fileID: 67598416}
   - 114: {fileID: 67598417}
+  - 114: {fileID: 67598418}
   m_Layer: 5
   m_Name: Button - Home
   m_TagString: Untagged
@@ -679,6 +680,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 67598418}
+        m_MethodName: Clear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &67598414
@@ -732,6 +745,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c262015a5ee627848a4b5882a809724e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &67598418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 67598411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b11ea4b6ade7fd4d83e40495646cf20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UsernameField: {fileID: 1634824174}
+  PasswordField: {fileID: 825855613}
 --- !u!1 &75669133
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,6 +2793,7 @@ GameObject:
   - 114: {fileID: 318249575}
   - 114: {fileID: 318249574}
   - 114: {fileID: 318249578}
+  - 114: {fileID: 318249579}
   m_Layer: 5
   m_Name: Button - Home
   m_TagString: Untagged
@@ -2856,6 +2883,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 318249579}
+        m_MethodName: Clear
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &318249576
@@ -2896,6 +2935,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c262015a5ee627848a4b5882a809724e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &318249579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 318249572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b11ea4b6ade7fd4d83e40495646cf20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UsernameField: {fileID: 1365784886}
+  PasswordField: {fileID: 1208577372}
 --- !u!1 &326623694
 GameObject:
   m_ObjectHideFlags: 0
@@ -4058,7 +4110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 831e700da7d06a34f98411d5d319741b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseUrl: http://localhost:24024/api/organization
+  baseUrl: http://www.grosseto.somee.com/api/organization
   Downloaded: 0
   Scene1: {fileID: 637000127}
 --- !u!114 &468273886
@@ -4072,7 +4124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d187203bfa4558341a5bdd589358d646, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseUrl: http://localhost:24024/api/organization
+  baseUrl: http://www.grosseto.somee.com/api/organization
   Downloaded: 0
   Scene1: {fileID: 637000127}
 --- !u!114 &468273887
@@ -6063,7 +6115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6ab1fce840a644286aa1cfa6f45158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: http://localhost:24024/api/organization
+  url: http://www.grosseto.somee.com/api/organization
 --- !u!1 &640717948
 GameObject:
   m_ObjectHideFlags: 0

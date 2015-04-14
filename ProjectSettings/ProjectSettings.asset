@@ -6,10 +6,10 @@ PlayerSettings:
   serializedVersion: 3
   AndroidProfiler: 0
   defaultScreenOrientation: 0
-  targetDevice: 2
+  targetDevice: 0
   targetGlesGraphics: 1
   targetIOSGraphics: -1
-  targetResolution: 0
+  targetResolution: 6
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: RestaurantApp

@@ -10,7 +10,7 @@ public class LoginHandler : MonoBehaviour {
 
     public InputField UsernameField;
     public InputField PasswordField;
-    private const string Url = "http://localhost:24024/api/AspNetUser/Login";
+    private const string Url = "http://www.grosseto.somee.com/api/AspNetUser/Login";
 
 
     public void Login()
@@ -57,7 +57,7 @@ public class LoginHandler : MonoBehaviour {
             headers = new Hashtable();
             headers.Add("Content-Type", "application/x-www-form-urlencoded");
             string b = "grant_type=password" + "&username=" + usr.username + "&password=" + usr.password;
-            www = new WWW("http://localhost:24024/token", encoding.GetBytes(b), headers);
+            www = new WWW("http://www.grosseto.somee.com/token", encoding.GetBytes(b), headers);
             yield return www;
 
             UserToken loggedInUserToken = JsonMapper.ToObject<UserToken>(www.text);

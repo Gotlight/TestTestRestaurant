@@ -15,7 +15,7 @@ public class MenuCatalogs
 public class OrganizationInfoDeserializer : MonoBehaviour
 {
     public MenuCatalogs catalogs;
-    public string baseUrl = "http://localhost:24024/api/organization";              //TODO: Change baseURL to real one
+    public string baseUrl = "http://www.grosseto.somee.com/api/organization";              //TODO: Change baseURL to real one
     private string langCode;
     public WWW www;
     public bool Downloaded = false;

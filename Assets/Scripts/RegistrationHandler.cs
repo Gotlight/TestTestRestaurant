@@ -17,8 +17,9 @@ public class RegistrationHandler : MonoBehaviour
 
     public InputField UsernameField;
     public InputField PasswordField;    
-    private const string Url = "http://localhost:24024/api/AspNetUser/Register";
-    
+    private const string Url = "http://www.grosseto.somee.com/api/AspNetUser/Register";
+
+   
 
     public void Register()
     {
@@ -64,7 +65,7 @@ public class RegistrationHandler : MonoBehaviour
             headers = new Hashtable();
             headers.Add("Content-Type", "application/x-www-form-urlencoded");
             string b = "grant_type=password" + "&username=" + usr.username + "&password=" + usr.password;
-            www = new WWW("http://localhost:24024/token", encoding.GetBytes(b), headers);
+            www = new WWW("http://www.grosseto.somee.com/token", encoding.GetBytes(b), headers);
             yield return www;
 
             UserToken loggedInUserToken = JsonMapper.ToObject<UserToken>(www.text);
