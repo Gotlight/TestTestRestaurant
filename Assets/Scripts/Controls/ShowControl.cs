@@ -11,8 +11,7 @@ public class ShowControl : MonoBehaviour
 
     public void GalleryPreview(Image image)
     {
-        var gp = InstantiateUi<ImagePreview>("GalleryPreview");
-        gp.Init(image.sprite);
+        InstantiateUi<ImagePreview>("GalleryPreview").Init(image.sprite);
     }
 
     private T InstantiateUi<T>(string controlName) where T : MonoBehaviour
