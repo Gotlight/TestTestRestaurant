@@ -14,7 +14,7 @@ public class TableReservationScreen : MonoBehaviour
     void OnEnable()
     {
         var userFullName = PlayerPrefs.GetString("User name");
-        GetComponentInChildren<Text>().text = DumbSingleton.Instance.organization.OrganizationName + " - reservation";
+        ScreenName.GetComponent<Text>().text = DumbSingleton.Instance.organization.OrganizationName + " - reservation";
         if (!userFullName.Equals(String.Empty))
         {
             IsLoggedIn = true;
