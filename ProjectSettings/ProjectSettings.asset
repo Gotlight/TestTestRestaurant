@@ -9,7 +9,7 @@ PlayerSettings:
   targetDevice: 0
   targetGlesGraphics: 1
   targetIOSGraphics: -1
-  targetResolution: 6
+  targetResolution: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: RestaurantApp
@@ -75,7 +75,7 @@ PlayerSettings:
   iPhoneBundleVersion: 1.0
   iPhoneShortBundleVersion: 1.0
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 9
+  AndroidMinSdkVersion: 19
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   apiCompatibilityLevel: 2
@@ -87,7 +87,7 @@ PlayerSettings:
   APKExpansionFiles: 0
   StripUnusedMeshComponents: 0
   iPhoneSdkVersion: 988
-  iPhoneTargetOSVersion: 16
+  iPhoneTargetOSVersion: 20
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
   uIStatusBarHidden: 0
@@ -112,7 +112,7 @@ PlayerSettings:
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 
-  AndroidTargetDevice: 0
+  AndroidTargetDevice: 3
   AndroidSplashScreenScale: 0
   AndroidKeystoreName: 
   AndroidKeyaliasName: 

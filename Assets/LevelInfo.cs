@@ -56,7 +56,7 @@ public class LevelInfo : MonoBehaviour
             list = org.Catalogs.data.Where(x => x.ParentID == level.ID);
             LevelInfoStack.Push(level);
             ScreenName.text = level.MenuCatalogLocalizationName;
-            if (LevelInfoStack.Count >= 3)
+            if (LevelInfoStack.Count >= 1)
             {
                 foreach (var menuRow in list)
                 {
