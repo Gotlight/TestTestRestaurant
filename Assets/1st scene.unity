@@ -5010,7 +5010,6 @@ GameObject:
   - 222: {fileID: 550649131}
   - 114: {fileID: 550649130}
   - 114: {fileID: 550649129}
-  - 114: {fileID: 550649132}
   m_Layer: 5
   m_Name: Button - Back
   m_TagString: Untagged
@@ -5103,22 +5102,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 550649126}
---- !u!114 &550649132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 550649126}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7b24e5b9f5349e43b5eb94ae125f04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Screen2: {fileID: 0}
-  Screen4: {fileID: 0}
-  ScreenName: {fileID: 364185735}
-  Panel: {fileID: 0}
-  GalleryIconPrefab: {fileID: 0}
 --- !u!1 &558281008
 GameObject:
   m_ObjectHideFlags: 0
@@ -9149,7 +9132,8 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11407538, guid: e6dc152fda80f1c4cab00953d59a9d8d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e6dc152fda80f1c4cab00953d59a9d8d, type: 2}
   m_RootGameObject: {fileID: 1972935123}
   m_IsPrefabParent: 0
@@ -9983,7 +9967,6 @@ GameObject:
   - 222: {fileID: 1231643339}
   - 114: {fileID: 1231643338}
   - 114: {fileID: 1231643337}
-  - 114: {fileID: 1231643340}
   m_Layer: 5
   m_Name: Button - GalleryPictureIcon
   m_TagString: Untagged
@@ -10076,22 +10059,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1231643335}
---- !u!114 &1231643340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1231643335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7b24e5b9f5349e43b5eb94ae125f04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Screen2: {fileID: 0}
-  Screen4: {fileID: 1287471203}
-  ScreenName: {fileID: 364185735}
-  Panel: {fileID: 0}
-  GalleryIconPrefab: {fileID: 0}
 --- !u!1 &1253870316
 GameObject:
   m_ObjectHideFlags: 0
@@ -11202,7 +11169,8 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11407538, guid: e6dc152fda80f1c4cab00953d59a9d8d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e6dc152fda80f1c4cab00953d59a9d8d, type: 2}
   m_RootGameObject: {fileID: 2043551068}
   m_IsPrefabParent: 0
@@ -11610,7 +11578,6 @@ GameObject:
   - 114: {fileID: 1516798367}
   - 114: {fileID: 1516798366}
   - 114: {fileID: 1516798369}
-  - 114: {fileID: 1516798370}
   m_Layer: 5
   m_Name: Button - Gallery
   m_TagString: Untagged
@@ -11689,7 +11656,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1516798370}
+      - m_Target: {fileID: 0}
         m_MethodName: ManageGalleryPreviewList
         m_Mode: 1
         m_Arguments:
@@ -11743,22 +11710,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextScreen: {fileID: 1287471203}
   CurrentScreen: {fileID: 468273883}
---- !u!114 &1516798370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1516798364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7b24e5b9f5349e43b5eb94ae125f04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Screen2: {fileID: 468273883}
-  Screen4: {fileID: 1287471203}
-  ScreenName: {fileID: 364185735}
-  Panel: {fileID: 0}
-  GalleryIconPrefab: {fileID: 11437442, guid: e6dc152fda80f1c4cab00953d59a9d8d, type: 2}
 --- !u!1 &1517098640
 GameObject:
   m_ObjectHideFlags: 0
@@ -14844,7 +14795,6 @@ GameObject:
   - 222: {fileID: 1972935128}
   - 114: {fileID: 1972935127}
   - 114: {fileID: 1972935126}
-  - 114: {fileID: 1972935125}
   - 114: {fileID: 1972935129}
   m_Layer: 5
   m_Name: GalleryPictureIconButton
@@ -14871,23 +14821,6 @@ RectTransform:
   m_AnchoredPosition: {x: 266, y: 418}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: .5, y: .5}
---- !u!114 &1972935125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11407538, guid: e6dc152fda80f1c4cab00953d59a9d8d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1023251470}
-  m_GameObject: {fileID: 1972935123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7b24e5b9f5349e43b5eb94ae125f04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Screen2: {fileID: 0}
-  Screen4: {fileID: 0}
-  ScreenName: {fileID: 0}
-  Panel: {fileID: 0}
-  GalleryIconPrefab: {fileID: 0}
 --- !u!114 &1972935126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15347,7 +15280,6 @@ GameObject:
   - 222: {fileID: 2043551072}
   - 114: {fileID: 2043551071}
   - 114: {fileID: 2043551070}
-  - 114: {fileID: 2043551073}
   - 114: {fileID: 2043551074}
   m_Layer: 5
   m_Name: Button - GalleryPictureIcon
@@ -15445,23 +15377,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 1416357412}
   m_GameObject: {fileID: 2043551068}
---- !u!114 &2043551073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11407538, guid: e6dc152fda80f1c4cab00953d59a9d8d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1416357412}
-  m_GameObject: {fileID: 2043551068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7b24e5b9f5349e43b5eb94ae125f04f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Screen2: {fileID: 0}
-  Screen4: {fileID: 0}
-  ScreenName: {fileID: 0}
-  Panel: {fileID: 0}
-  GalleryIconPrefab: {fileID: 0}
 --- !u!114 &2043551074
 MonoBehaviour:
   m_ObjectHideFlags: 0
