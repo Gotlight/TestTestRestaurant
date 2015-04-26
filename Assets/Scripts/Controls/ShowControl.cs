@@ -15,11 +15,6 @@ public class ShowControl : MonoBehaviour
         gp.Init(image.sprite);
     }
 
-    public void GalleryIterator()
-    {
-        
-    }
-
     private T InstantiateUi<T>(string controlName) where T : MonoBehaviour
     {
         const string root = "UIControls";

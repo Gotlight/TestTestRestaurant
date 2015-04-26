@@ -52,7 +52,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: GalleryPreview@close
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: a505a00cb17da0c4b8ef4338f24fd142, type: 2}
@@ -67,7 +67,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: GalleryPreview_open
-  m_Speed: 1
+  m_Speed: 2
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: fae4d3b3f5cf3ae44bdcd6189db43983, type: 2}
