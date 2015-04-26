@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ImagePreview : MonoBehaviour
@@ -11,10 +12,16 @@ public class ImagePreview : MonoBehaviour
         _image.SetNativeSize();
     }
 
+    IEnumerator WaitAndClose(float timeout)
+    {
+        yield return new WaitForSeconds(timeout);
+        Destroy(gameObject);
+    }
 
     public void Close()
     {
         var a = GetComponent<Animator>();
         a.SetTrigger("CloseTrigger");
+        StartCoroutine(WaitAndClose(.33f));
     }
 }
