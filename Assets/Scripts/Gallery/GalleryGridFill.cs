@@ -7,6 +7,7 @@ public class GalleryGridFill : MonoBehaviour
 {
     [SerializeField] private GridLayoutGroup ContentGrid;
     [SerializeField] private Image GridItemPrefab;
+    public Text ScreenName;
     
     private string OrgName { get { return DumbSingleton.Instance.organization.OrganizationName; } }
     
@@ -22,6 +23,7 @@ public class GalleryGridFill : MonoBehaviour
 
     private void OnEnable()
     {
+        ScreenName.text = DumbSingleton.Instance.organization.OrganizationName + " - gallery";
         // clear content
         foreach (var child in ContentGrid.GetComponentsInChildren<Image>())
             Destroy(child.gameObject);

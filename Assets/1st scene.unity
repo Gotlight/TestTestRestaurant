@@ -10403,6 +10403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ContentGrid: {fileID: 936411603}
   GridItemPrefab: {fileID: 11472704, guid: e51d4b38f469a2343a812f23d50bd272, type: 2}
+  ScreenName: {fileID: 364185735}
 --- !u!1 &1302811028
 GameObject:
   m_ObjectHideFlags: 0
