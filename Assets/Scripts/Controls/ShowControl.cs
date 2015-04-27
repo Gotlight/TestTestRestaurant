@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ShowControl : MonoBehaviour
@@ -37,4 +38,9 @@ public class ShowControl : MonoBehaviour
         }
     }
 
+}
+
+public class Test : TouchInputModule
+{
+    
 }
